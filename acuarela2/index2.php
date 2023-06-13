@@ -1,12 +1,28 @@
-<?php require_once "vistas/parteSuperior.php";?>
-<!--Inicio del contenido principal   -->
-<div class="container">
-    <H1>Panel  Principal </H1>
 
+<?php
+session_start();
+$varsesion = $_SESSION['usuario'];
 
-</div>
-<!-- Fin del contenido principal   -->
+if($varsesion == null || $varsesion = ''){
+    header("location:login.php");}
+ 
 
+?>
+<?php require_once "vistas/parteSuperior.php";?>    
+<html>
+    <head>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    </head>
+    <body>
+        <section>
+               <h1>Bienvenido : <?php echo $_SESSION['usuario'] ?> </h1>
+               <a href="cerrarsesion.php">Cerrar Sesion</a>
+    </body>
+</html>
+
+<br><br>
 
 <?php require_once "vistas/parteInferior.php";?>
+
+
