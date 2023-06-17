@@ -8,7 +8,7 @@ if($varsesion == null || $varsesion = ''){
  
 
 ?>
-<?php require_once "vistas/parteSuperior.php";?>    
+<?php require_once "vistas/parteSuperior2.php";?>    
 <html>
     <head>
         <link href="css/bootstrap.min.css" rel="stylesheet">
