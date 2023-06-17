@@ -23,23 +23,23 @@
       
                 <nav style="background-color:white;">
                     <br>
-                <h1><a href="index.php"><img src="img/atras.png"></a></h1>
+                <h1><a href="index2.php"><img src="img/atras.png"></a></h1>
                 <br>
             
             </a>
-            <button class="navbar-burger is-warning button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <!-- <button class="navbar-burger is-warning button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
-            </button>
+            </button> -->
         </header>
         </div>
     
         <div class="navbar-menu" background-color="white" class="social">
-            <div class="navbar-start">
+            <!-- <div class="navbar-start">
                <a class="navbar-item" href="productos.php">Productos</a>
             <a class="navbar-item" href="tienda.php">Tienda</a>
-            </div>
+            </div> -->
         </div>
             <div class="navbar-end">
                 <div class="navbar-item">

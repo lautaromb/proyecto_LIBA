@@ -1,4 +1,4 @@
-<?php require_once "vistas/parteSuperior.php";?>
+<?php require_once "vistas/parteSuperior2.php";?>
 <!--Inicio del contenido principal   -->
 <div class="container">
     <H1>Clientes </H1>

@@ -28,7 +28,7 @@ function quitarProductoDelCarrito($idProducto)
 function obtenerProductos()
 {
     $bd = obtenerConexion();
-    $sentencia = $bd->query("SELECT id_producto, nombre_producto, descripcion_producto, precio_producto, cantidad FROM productos");
+    $sentencia = $bd->query("SELECT id_producto, nombre_producto, descripcion_producto, precio_producto, imagen, cantidad FROM productos");
     return $sentencia->fetchAll();
 }
 function productoYaEstaEnCarrito($idProducto)
@@ -50,14 +50,14 @@ function obtenerIdsDeProductosEnCarrito()
     return $sentencia->fetchAll(PDO::FETCH_COLUMN);
 }
 
-function agregarProductoAlCarrito($idProducto)
+function agregarProductoAlCarrito($id_producto)
 {
     // Ligar el id del producto con el usuario a través de la sesión
     $bd = obtenerConexion();
     iniciarSesionSiNoEstaIniciada();
     $idSesion = session_id();
     $sentencia = $bd->prepare("INSERT INTO carrito_usuarios(id_sesion, id_producto) VALUES (?, ?)");
-    return $sentencia->execute([$idSesion, $idProducto]);
+    return $sentencia->execute([$id_sesion, $id_producto]);
 }
 
 
@@ -72,14 +72,14 @@ function eliminarProducto($id_producto)
 {
     $bd = obtenerConexion();
     $sentencia = $bd->prepare("DELETE FROM productos WHERE id_producto = ?");
-    return $sentencia->execute([$id]);
+    return $sentencia->execute([$id_producto]);
 }
 
-function guardarProducto($nombre, $precio, $descripcion)
+function guardarProducto($nombre_producto, $precio_producto, $descripcion_producto, $imagen)
 {
     $bd = obtenerConexion();
-    $sentencia = $bd->prepare("INSERT INTO productos(nombre_producto, descripcion_producto, precio_producto) VALUES(?, ?, ?)");
-    return $sentencia->execute([$nombre, $precio, $descripcion]);
+    $sentencia = $bd->prepare("INSERT INTO productos(nombre_producto, descripcion_producto, precio_producto, imagen) VALUES(?, ?, ?,?)");
+    return $sentencia->execute([$nombre_producto, $precio_producto, $descripcion_producto, $imagen]);
 }
 
 function obtenerVariableDelEntorno($key)
