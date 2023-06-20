@@ -1,6 +1,9 @@
 <?php
 ?>
 <?php include_once "encabezado.php" ?>
+<html><head><style>
+    
+</style></head></html>
 <div class="columns">
     <div class="column is-one-third">
         <h2 class="is-size-2">Nuevo producto</h2>

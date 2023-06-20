@@ -22,15 +22,18 @@
             * {
                 padding:0px;
                 margin: 0px;
+                background-color: rgb(50, 152,220);
             }
             #header {
+                background-color: white;
                 margin: auto;
-                width: 500px;
+                width: 335px;
                 font-family: Arial, Helvetica, sans-serif;
             }
 
             ul, ol{
                 list-style: none;
+
 
             }
 
@@ -60,9 +63,20 @@
                 display: block;
             }
             
+            .header{
+                background-color: rgb(50, 152,220);
+            }
+            
+             a {
+                color: white;
+            } 
 
-
-
+            div {
+                color: white;
+            } 
+            .buttons{
+                text-align: center;
+            }
         </style> 
     </head>
     <body>
@@ -70,7 +84,7 @@
 
         <div id="header">
             <ul class="nav">
-                <li><a href="">INICIO</a></li>
+                <li><a href="index2.php">INICIO</a></li>
                 <li><a href="">Componentes</a>  
                     <ul>
                         <li><a href="productos.php">Productos</a></li>
@@ -87,7 +101,7 @@
                     </ul>
                 </li>
             </ul>
-
+<br><br><br><br>
 
         </div>  
     
